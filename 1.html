@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+    <title>HTML</title>
+    <meta charset="utf-8">
+    <style>
+      a {
+        color:black;
+        text-decoration: none;
+      }
+      h1 {
+        font-size: 45px;
+        text-align: center;
+        border-bottom: 1px solid black;
+        padding: 20px;
+        margin: 0;
+      }
+      .title {
+        color:blue;
+      }
+      .grid ul {
+        border-right: 1px black solid;
+        width: 100px;
+        margin: 0;
+        padding:5px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+      @media(max-width:800px){
+        .grid {
+          display: block;
+          border-bottom: 1px black solid;
+        }
+        .grid ul {
+          border-right:none;
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1><a href="index.html" title="WELCOME page" class="title">WEB</a></h1>
+    <div class="grid">
+      <ul>
+        <a href="1.html" style="color:red;text-decoration:underline">1.HTML</a>
+        <a href="2.html">2.CSS</a>
+        <a href="3.html">3.JavaScript</a>
+      </ul>
+      <div>
+        <h2 style="text-align:center;" class="title">Starting WebPrograming: TAG, the basic</h2>
+        <h3>Tags of <a href="https://www.w3.org/TR/html51/" target="_blank" title="html5.1 specification">HTML</a></h3>
+
+        Not a big deal.
+        TAG is a basic syntax of the HTML code. Simple is the important.
+        With the sign <>, you can make a lot of "tricks" of the HTML code.<br><br>
+        <p>Basically, the parent tags are these:<br>
+          !DOCTYPE html<br>
+          html<br>
+          head<br>
+          body<br>
+          These point out that this script is made up of the syntax of HTML, or this is the head part, body part, or etc.</p>
+        <p>Tag "title" sets the title of the webpage.</p>
+        <p>Tag "h1" to "h6", headlines.<br>
+          The smaller the number is, the bigger the words become.</p>
+        <p>Tag "strong" makes the word to bolded one.</p>
+        <p>Tag "u" underlines the word.</p>
+        <p>Tag "p" makes the paragraph, and using CSS, as "p style="margin-top:40px"", you can specify it.<br>
+          Also there is the tag "br". This tag is the enter key of the html world. It just makes the new line.</p>
+        <p>Tag "img" paste images. <br>
+          Attribution "scr" is the abbreviaition of 'source'; this insists a name of the image file you want to show up.<br>
+          Plus, attribution "width" litteraly sets the width of the image.<br>
+          you can use this attribution as 'width="100%"'<br>
+          Here's the example:<br><img src="coding.jpg" width="30%"><br></p>
+        <p>Tag "ol" is tag of ordered list, and "ul" is tag of unordered tag.<br>
+          "ol" marks the number in front of the word. but "ul" doesn't.</p>
+        <p>Tag "a", which means 'anchor', links a webpage to the other.<br>
+          Basically, attribution "href" is essential. It is the domain of the webpage you want to link toward.<br>
+          Also, you can use the attribution "title" to show a bit of explanation if the mouse is on the link.<br></p>
+        <p>Tag "iframe" attaches video. <br> Let's see a <a href="https://www.youtube.com/watch?v=7T7r_oSp0SE&list=PLuHgQVnccGMDZP7FJ_ZsUrdCGH68ppvPb&index=31video"
+          title="Tag iframe">video</a> to know how to use this tag.
+          <br><iframe width="50%" src="https://www.youtube.com/embed/7T7r_oSp0SE?list=PLuHgQVnccGMDZP7FJ_ZsUrdCGH68ppvPb" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+        <p>Attribution "class" and "id" aloocate the lecvel of the object.
+      </div>
+    </div>
+      <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://firstweb-7.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    </p>
+      </body>
+</html>
