@@ -31,6 +31,7 @@
             const doctor = ["한동석"];
             const couple = ["허준영", "김지아"];
             const noble = ["정규현"];
+            const word = "제시어"
 
             function findingArray(nameArray, name) {
               var nonname = [];
@@ -45,7 +46,7 @@
             while (true) {
                 var value = window.prompt("자신의 이름 세글자를 적어주세요!");
                 if (mafia.includes(value)) {
-                  alert("당신은 마피아입니다. 당신의 동료 마피아는 " +findingArray(mafia, value).toString()+" 입니다.");
+                  alert("당신은 마피아입니다. 당신의 동료 마피아는 " +findingArray(mafia, value).toString()+" 입니다. 제시어는 \"" +word+"\" 입니다.");
                   break;
                 }
                 else if (police.includes(value)){
