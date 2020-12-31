@@ -15,8 +15,8 @@
     </head>
     <body>
       <h1>
-      플레이어 수: 10 <br>
-      마피아: 4 <br>
+      플레이어 수: 15 <br>
+      마피아: 4<br>
       의사: 2 <br>
       경찰: 1 <br>
       커플: 2 (1쌍) <br>
@@ -45,30 +45,34 @@
 
             while (true) {
                 var value = window.prompt("자신의 이름 세글자를 적어주세요!");
-                if (mafia.includes(value)) {
-                  alert("당신은 마피아입니다. 당신의 동료 마피아는 " +findingArray(mafia, value).toString()+" 입니다. 제시어는 \"" +word+"\" 입니다.");
-                  break;
-                }
-                else if (police.includes(value)){
-                  alert("당신은 경찰입니다. 마피아 없는 세상을 만들어 주세요!");
-                  break;
-                }
-                else if (doctor.includes(value)){
-                  alert("당신은 의사입니다. 사람을 살리는 사람이 되어주세요!");
-                  break;
-                }
-                else if (couple.includes(value)){
-                  alert("당신은 커플입니다. 당신의 짝은 " +findingArray(couple, value).toString()+" 입니다. 예쁜 사랑하세요!");
-                  break;
-                }
-                else if (noble.includes(value)){
-                  alert("당신은 귀족입니다.");
-                  break;
-                }
-                else {
-                  alert("당신은 시민입니다. 재밌게 게임하세요!");
-                  break;
-                }
+                  if (confirm("당신의 이름이 \""+value+"\"가 맞습니까? 아니면, 취소를 눌러주시고, 맞으면, 확인을 눌러주세요")) {
+                    if (mafia.includes(value)) {
+                      alert("당신은 마피아입니다. 당신의 동료 마피아는 " +findingArray(mafia, value).toString()+" 입니다. 제시어는 \"" +word+"\" 입니다.");
+                      break;
+                    }
+                    else if (police.includes(value)){
+                      alert("당신은 경찰입니다. 마피아 없는 세상을 만들어 주세요!");
+                      break;
+                    }
+                    else if (doctor.includes(value)){
+                      alert("당신은 의사입니다. 사람을 살리는 사람이 되어주세요!");
+                      break;
+                    }
+                    else if (couple.includes(value)){
+                      alert("당신은 커플입니다. 당신의 짝은 " +findingArray(couple, value).toString()+" 입니다. 예쁜 사랑하세요!");
+                      break;
+                    }
+                    else if (noble.includes(value)){
+                      alert("당신은 귀족입니다.");
+                      break;
+                    }
+                    else {
+                      alert("당신은 시민입니다. 재밌게 게임하세요!");
+                      break;
+                    }
+                  } else{
+                    alert("이름을 다시 입력해주세요.");
+                  }
             }
 
             </script>
