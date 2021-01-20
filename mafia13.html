@@ -15,64 +15,65 @@
     </head>
     <body>
       <h1>
-      플레이어 수: 10 <br>
-      마피아: 2 <br>
-      의사: 1 <br>
-      경찰: 1 <br>
-      커플: 2 (1쌍) <br>
-      시민: 3 <br>
-    </h1>
+        플레이어 수: 13 <br>
+        마피아: 3 <br>
+        의사: 2 <br>
+        경찰: 1 <br>
+        커플: 2 (1쌍) <br>
+        귀족: 1 <br>
+        시민: 4 <br>
+      </h1>
 
             <script>
-            const player = [];
-            const mafia = ["최강민", "김이안"]; //여기 이름을 적습니다.
-            const police = ["김연우"]; //여기 지정어를 적습니다.
-            const doctor = ["옥준모"];
-            const couple = ["이윤민", "임태강"];
-            const noble = ["박예인" "박준하" "장휘수"];
-            const word = "제시어"
+                const player = [];
+                const mafia = ["최경찬", "손승헌", "김지아"]; //여기 이름을 적습니다.
+                const police = ["임일균"]; //여기 지정어를 적습니다.
+                const doctor = ["최태윤"];
+                const couple = ["이나연", "정규현"];
+                const noble = ["한동석"];
+                const word = "제시어"
 
-            function findingArray(nameArray, name) {
-              var nonname = [];
-              for (i = 0; i <nameArray.length; i++) {
-                if (nameArray[i] != name) {
-                  nonname.push(nameArray[i]);
-                }
-              }
-              return nonname;
-            }
-
-            while (true) {
-                var value = window.prompt("자신의 이름 세글자를 적어주세요!");
-                  if (confirm("당신의 이름이 \""+value+"\"가 맞습니까? 아니면, 취소를 눌러주시고, 맞으면, 확인을 눌러주세요")) {
-                    if (mafia.includes(value)) {
-                      alert("당신은 마피아입니다. 당신의 동료 마피아는 " +findingArray(mafia, value).toString()+" 입니다. 제시어는 \"" +word+"\" 입니다.");
-                      break;
+                function findingArray(nameArray, name) {
+                  var nonname = [];
+                  for (i = 0; i <nameArray.length; i++) {
+                    if (nameArray[i] != name) {
+                      nonname.push(nameArray[i]);
                     }
-                    else if (police.includes(value)){
-                      alert("당신은 경찰입니다. 마피아 없는 세상을 만들어 주세요!");
-                      break;
-                    }
-                    else if (doctor.includes(value)){
-                      alert("당신은 의사입니다. 사람을 살리는 사람이 되어주세요!");
-                      break;
-                    }
-                    else if (couple.includes(value)){
-                      alert("당신은 커플입니다. 당신의 짝은 " +findingArray(couple, value).toString()+" 입니다. 예쁜 사랑하세요!");
-                      break;
-                    }
-                    else if (noble.includes(value)){
-                      alert("당신은 귀족입니다.");
-                      break;
-                    }
-                    else {
-                      alert("당신은 시민입니다. 재밌게 게임하세요!");
-                      break;
-                    }
-                  } else{
-                    alert("이름을 다시 입력해주세요.");
                   }
-            }
+                  return nonname;
+                }
+
+                while (true) {
+                    var value = window.prompt("자신의 이름 세글자를 적어주세요!");
+                      if (confirm("당신의 이름이 \""+value+"\"가 맞습니까? 아니면, 취소를 눌러주시고, 맞으면, 확인을 눌러주세요")) {
+                        if (mafia.includes(value)) {
+                          alert("당신은 마피아입니다. 당신의 동료 마피아는 " +findingArray(mafia, value).toString()+" 입니다. 제시어는 \"" +word+"\" 입니다.");
+                          break;
+                        }
+                        else if (police.includes(value)){
+                          alert("당신은 경찰입니다. 마피아 없는 세상을 만들어 주세요!");
+                          break;
+                        }
+                        else if (doctor.includes(value)){
+                          alert("당신은 의사입니다. 사람을 살리는 사람이 되어주세요!");
+                          break;
+                        }
+                        else if (couple.includes(value)){
+                          alert("당신은 커플입니다. 당신의 짝은 " +findingArray(couple, value).toString()+" 입니다. 예쁜 사랑하세요!");
+                          break;
+                        }
+                        else if (noble.includes(value)){
+                          alert("당신은 귀족입니다.");
+                          break;
+                        }
+                        else {
+                          alert("당신은 시민입니다. 재밌게 게임하세요!");
+                          break;
+                        }
+                      } else{
+                        alert("이름을 다시 입력해주세요.");
+                      }
+                }
 
             </script>
     </body>
