@@ -13,25 +13,20 @@
         }
         </style>
     </head>
-    <body>
-      <h1>
-        플레이어 수: 14 <br>
-        마피아: 3 <br>
-        의사: 1 <br>
-        경찰: 1 <br>
-        커플: 2 (1쌍) <br>
-        귀족: 1 <br>
-        시민: 6 <br>
+    <body style = "background-color: black">
+        <h1 style = "background-color: gray">
+        <span style = "color:indigo; font-weight:bold;font-size: larger">최경찬</span>송별회
       </h1>
-
             <script>
-                const player = [];
+                const players = 13; //플레이어 수
                 const mafia = ["김정현", "김민지", "허준영"]; //여기 이름을 적습니다.
                 const police = ["정규현"]; //여기 지정어를 적습니다.
                 const doctor = ["이나연"];
-                const couple = ["최태윤", "학동석"];
+                const couple = ["최태윤", "한동석"];
                 const noble = ["강윤진"];
                 const word = "제시어"
+
+                document.write("<h2 style = \"color:powderblue\">플레이어 수: ", players, "<br>마피아: ", mafia.length, "<br>경찰: ", police.length, "<br>의사: ", doctor.length, "<br>커플: ", couple.length, "(", couple.length/2, "쌍)<br>귀족: ", noble.length, "<br>시민: ", players - mafia.length - police.length - doctor.length - couple.length - noble.length, "</h2>");
 
                 function findingArray(nameArray, name) {
                   var nonname = [];
@@ -42,9 +37,14 @@
                   }
                   return nonname;
                 }
-
-                while (true) {
-                    var value = window.prompt("자신의 이름 세글자를 적어주세요!");
+                function mafiaconfig() {
+                  while (true) {
+                    var value = window.prompt("자신의 이름 세글자를 적어주세요! 취소를 원하면 취소 버튼 클릭");
+                    if (value == null) break;
+                    else if (value == "") {
+                      alert("빈칸입니다.");
+                      continue;
+                    }
                       if (confirm("당신의 이름이 \""+value+"\"가 맞습니까? 아니면, 취소를 눌러주시고, 맞으면, 확인을 눌러주세요")) {
                         if (mafia.includes(value)) {
                           alert("당신은 마피아입니다. 당신의 동료 마피아는 " +findingArray(mafia, value).toString()+" 입니다. 제시어는 \"" +word+"\" 입니다.");
@@ -73,8 +73,13 @@
                       } else{
                         alert("이름을 다시 입력해주세요.");
                       }
-                }
+                    }
+                  }
 
             </script>
+            <br>
+            <span style="color:white">아래 버튼을 클릭하여 자신의 역할을 확인하세요.</span><br>
+            <input type="button" value="내 역할 알아보기" onclick="mafiaconfig()"> <br><br><br>
+            <a href="vote.html">투표하러 가기</a>
     </body>
 </html>
