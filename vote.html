@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <title>투표</title>
+  </head>
+
+    <body style = "background-color: black">
+
+      <script>
+
+        const votedCandidates = { };
+
+        function getName() {
+          if (event.keyCode == 13) {
+            var name = document.getElementById('voteName').value;
+            var count = 1;
+            for (key in votedCandidates) {
+              if (key == name) {
+                votedCandidates[name] += 1;
+              }
+            }
+          }
+        }
+
+        votedCandidates.showAll = function {
+          for (key in this) {
+            document.write(key, ' ', this.key);
+          }
+        }
+
+        votedCandidates.showAll();
+      </script>
+          <input type="text" id="voteName" onchange="getName()">
+          <a href="mafia13.html">돌아가기</a>
+  </body>
+
+</html>
