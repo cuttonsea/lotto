@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>투표결과</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+      var http = require('http');
+      var qs = require('queryString');
+
+      function vote(request, response) {
+        var body = '';
+
+        request.on('data', function(data){
+          body += data;
+        });
+
+        request.on('end', function() {
+          var post = qs.parse(body);
+        });
+      }
+    }
+    document.write(post);
+    </script>
